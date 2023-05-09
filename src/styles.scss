@@ -3,35 +3,43 @@
 // Reset
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.d-block > *  {
-    display: block;
+.d-block > * {
+  display: block;
 }
 
 .d-flex {
-    display: flex;
+  display: flex;
 }
 
 .flex-justify-content-center {
-    justify-content: center;
+  justify-content: center;
+}
+
+.flex-align-item-center {
+  align-items: center;
 }
 
 .flex-fill {
-    flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 
 .p-20 {
-    padding: 20px;
+  padding: 20px;
 }
 
 .m-20 {
-    margin: 20px;
+  margin: 20px;
 }
 
 button {
-    padding: 5px 10px;
+  padding: 5px 10px;
+}
+
+.debug {
+  border: 1px solid black;
 }

@@ -8,3 +8,50 @@
 <p>Permettre à l'utilisateur de transformer le quadrilatère en cercle.</p>
 
 <hr>
+
+<div class="row debug">
+    <div class="col-4 debug">
+        <h3>Propriétés du quadrilatère :</h3>
+        <p>
+            Hauteur ({{ height }})
+            <input type="range" [min]="min" [max]="max" [(ngModel)]="height" (ngModelChange)="update()">
+        </p>
+
+        <p>
+            Largeur ({{ width }})
+            <input type="range" [min]="min" [max]="max" [(ngModel)]="width" (ngModelChange)="update()">
+        </p>
+
+        <p>
+            Couleur {{ color }}
+            <input type="color" [(ngModel)]="color" (ngModelChange)="update()">
+        </p>
+
+        <p>
+            Cercle
+            <input type="checkbox" [(ngModel)]="isCircle" (ngModelChange)="update()">
+        </p>
+
+        <h3>Propriétés de la bordure :</h3>
+
+        <p>
+            Largeur {{ borderWidth }}
+            <input type="range" min="0" max="5" [(ngModel)]="borderWidth" (ngModelChange)="update()">
+        </p>
+
+        <p>
+            Couleur {{ borderColor }}
+            <input type="color" [(ngModel)]="borderColor" (ngModelChange)="update()">
+        </p>
+
+        <p>
+            Style {{ borderStyle }}
+            <input type="text" [(ngModel)]="borderStyle" (ngModelChange)="update()">
+            <!-- Select avec options de préférence -->
+        </p>
+
+    </div>
+    <div class="col debug d-flex flex-justify-content-center flex-align-item-center">
+        <div [ngStyle]="style" [ngClass]="{ circle: isCircle }"></div>
+    </div>
+</div>
