@@ -36,6 +36,10 @@ import { Exo09Component } from './exercices/exo09/exo09.component';
 import { Demo10Component } from './demos/demo10/demo10.component';
 import { PrepareRenderDirective } from './demos/demo10/prepare-render.directive';
 import { HighlightDirective } from './demos/demo10/highlight.directive';
+import { Demo11Component } from './demos/demo11/demo11.component';
+import { ChildInputComponent } from './demos/demo11/child-input/child-input.component';
+import { ChildOutputComponent } from './demos/demo11/child-output/child-output.component';
+import { ChildNgcontentComponent } from './demos/demo11/child-ngcontent/child-ngcontent.component';
 
 @NgModule({
   declarations: [
@@ -70,6 +74,10 @@ import { HighlightDirective } from './demos/demo10/highlight.directive';
     Demo10Component,
     PrepareRenderDirective,
     HighlightDirective,
+    Demo11Component,
+    ChildInputComponent,
+    ChildOutputComponent,
+    ChildNgcontentComponent,
   ],
   imports: [
     BrowserModule,
