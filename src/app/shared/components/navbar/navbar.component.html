@@ -1,30 +1,62 @@
-<nav>
-    <a routerLink="home">Accueil</a>
-    <ul>
-        <li>
-            <a routerLink="demos">Démonstrations</a>
-            <ul>
-                <li><a routerLink="/demos/demo01">Demo 01 - One-Way Binding</a></li>
-                <li><a routerLink="/demos/demo02">Demo 02 - Two-Way Binding</a></li>
-                <li><a routerLink="/demos/demo03">Demo 03 - Event Binding</a></li>
-                <li><a routerLink="/demos/demo04">Demo 04 - Attribute Binding</a></li>
-                <li><a routerLink="/demos/demo05">Demo 05 - La base du routing</a></li>
-                <li><a routerLink="/demos/demo06">Demo 06 - Les Pipes</a></li>
-                <li><a routerLink="/demos/demo07">Demo 07 - Les Custom Pipes</a></li>
-                <li><a routerLink="/demos/demo08">Demo 08 - La directive de composants</a></li>
-                <li><a routerLink="/demos/demo09">Demo 09 - La directive structurelles</a></li>
+<nav class="navbar navbar-expand-lg bg-body-tertiary bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" routerLink="">
+            <img src="assets/logo.png" alt="Logo" width="25" height="25" class="d-inline-block align-text-top">
+            Demo Angular
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" routerLink="home">Home</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" routerLink="demos" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Démonstration
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" routerLink="/demos/demo01">Demo 01 - One-Way Binding</a></li>
+                        <li><a class="dropdown-item" routerLink="/demos/demo02">Demo 02 - Two-Way Binding</a></li>
+                        <li><a class="dropdown-item" routerLink="/demos/demo03">Demo 03 - Event Binding</a></li>
+                        <li><a class="dropdown-item" routerLink="/demos/demo04">Demo 04 - Attribute Binding</a></li>
+                        <li><a class="dropdown-item" routerLink="/demos/demo05">Demo 05 - La base du routing</a></li>
+                        <li><a class="dropdown-item" routerLink="/demos/demo06">Demo 06 - Les Pipes</a></li>
+                        <li><a class="dropdown-item" routerLink="/demos/demo07">Demo 07 - Les Custom Pipes</a></li>
+                        <li><a class="dropdown-item" routerLink="/demos/demo08">Demo 08 - La directive de composants</a>
+                        </li>
+                        <li><a class="dropdown-item" routerLink="/demos/demo09">Demo 09 - La directive structurelles</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" routerLink="exercices" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Exercices
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" routerLink="/exercices/exo01">Exercice 01 - Créer son profil</a>
+                        </li>
+                        <li><a class="dropdown-item" routerLink="/exercices/exo02">Exercice 02 - Complétion du
+                                profil</a></li>
+                        <li><a class="dropdown-item" routerLink="/exercices/exo03">Exercice 03 - Le chronomètre
+                                (basique)</a></li>
+                        <li><a class="dropdown-item" routerLink="/exercices/exo05">Exercice 05 - Menu complet</a></li>
+                        <li><a class="dropdown-item" routerLink="/exercices/exo07">Exercice 07 - Convertisseur de
+                                degré</a></li>
+                        <li><a class="dropdown-item" routerLink="/exercices/exo08">Exercice 08 - Générateur de forme</a>
+                        </li>
+                        <li><a class="dropdown-item" routerLink="/exercices/exo09">Exercice 09 - Panier de courses</a>
+                        </li>
+                    </ul>
+                </li>
             </ul>
-        </li>
-        <li>
-            <a routerLink="exercices">Exercices</a>
-            <ul>
-                <li><a routerLink="/exercices/exo01">Exercice 01 - Créer son profil</a></li>
-                <li><a routerLink="/exercices/exo02">Exercice 02 - Complétion du profil</a></li>
-                <li><a routerLink="/exercices/exo03">Exercice 03 - Le chronomètre (basique)</a></li>
-                <li><a routerLink="/exercices/exo05">Exercice 05 - Menu complet</a></li>
-                <li><a routerLink="/exercices/exo07">Exercice 07 - Convertisseur de degré</a></li>
-                <li><a routerLink="/exercices/exo08">Exercice 08 - Générateur de forme</a></li>
-            </ul>
-        </li>
-    </ul>
+        </div>
+    </div>
 </nav>
