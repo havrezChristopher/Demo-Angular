@@ -1,0 +1,56 @@
+<h2>Demo 10 - Les Custom Directives</h2>
+
+<p>
+    Les Custom Directives en Angular sont des fonctionnalités puissantes qui permettent de créer des comportements
+    réutilisables et personnalisés pour les éléments du DOM dans une application.
+    Elles sont utilisées pour étendre les fonctionnalités des éléments existants ou pour créer des nouveaux éléments
+    avec des comportements spécifiques.
+</p>
+
+
+<span>Clique sur moi et regarde dans ta console.</span>
+<p appPrepareRender>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem inventore ad iste? Nihil placeat vero illo ab?
+    Facere distinctio sit, neque doloribus aliquid minus dolor voluptatem cupiditate. Eum, dicta magni?
+</p>
+
+<p>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi velit harum, dolore ullam, ea ipsam commodi, quo
+    delectus voluptatibus temporibus optio placeat autem repudiandae accusamus hic quidem ratione similique libero.
+</p>
+
+<span>Clique sur moi et regarde dans ta console.</span>
+<p appPrepareRender>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, assumenda quae. Facere, deleniti cumque veritatis
+    totam pariatur nobis, inventore eveniet illum omnis adipisci eaque saepe nesciunt laudantium qui. Praesentium,
+    totam.
+</p>
+
+<h3>Directive d'attribut customs sur event</h3>
+
+<p appHighlight>
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et laudantium blanditiis, eos quidem deserunt perferendis
+    nemo qui tenetur reprehenderit molestias accusantium voluptatibus nam at quae amet sunt, quibusdam ipsam
+    consequatur!
+</p>
+
+<p appHighlight="lightgreen">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque ipsa non accusamus accusantium, aut vel odit
+    perferendis natus, deleniti consequuntur iusto magni, eum repellendus quasi mollitia! Aliquam animi dolore magnam.
+</p>
+
+<p [appHighlight]="color">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsum consequatur nihil illo minima? Eaque cumque
+    ducimus, laboriosam quaerat, consectetur corporis fuga, laborum iure eos vero culpa quia quasi vitae?
+</p>
+
+<p appHighlight defaultColor="#987654">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem temporibus expedita iure nostrum asperiores, molestiae
+    vel molestias optio quam, dolorum suscipit est! Velit eligendi veritatis cupiditate ab provident dolorum
+    consequuntur?
+</p>
+<p appHighlight [defaultColor]="defaultColor">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem temporibus expedita iure nostrum asperiores, molestiae
+    vel molestias optio quam, dolorum suscipit est! Velit eligendi veritatis cupiditate ab provident dolorum
+    consequuntur?
+</p>
