@@ -32,6 +32,7 @@ import { ConvertisseurDegrePipe } from './exercices/exo07/convertisseur-degre.pi
 import { Demo08Component } from './demos/demo08/demo08.component';
 import { Exo08Component } from './exercices/exo08/exo08.component';
 import { Demo09Component } from './demos/demo09/demo09.component';
+import { Exo09Component } from './exercices/exo09/exo09.component';
 
 @NgModule({
   declarations: [
@@ -62,6 +63,7 @@ import { Demo09Component } from './demos/demo09/demo09.component';
     Demo08Component,
     Exo08Component,
     Demo09Component,
+    Exo09Component,
   ],
   imports: [
     BrowserModule,
