@@ -20,6 +20,7 @@ import { Exo05Component } from './exercices/exo05/exo05.component';
 import { Exo07Component } from './exercices/exo07/exo07.component';
 import { Exo08Component } from './exercices/exo08/exo08.component';
 import { Exo09Component } from './exercices/exo09/exo09.component';
+import { Exo11Component } from './exercices/exo11/exo11.component';
 import { HomeComponent } from './home/home.component';
 import { FourofourComponent } from './shared/components/fourofour/fourofour.component';
 
@@ -53,6 +54,7 @@ const routes: Routes = [
       { path: 'exo07', component: Exo07Component },
       { path: 'exo08', component: Exo08Component },
       { path: 'exo09', component: Exo09Component },
+      { path: 'exo11', component: Exo11Component },
     ]
   },
 
