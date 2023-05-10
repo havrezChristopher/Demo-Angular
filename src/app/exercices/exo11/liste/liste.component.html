@@ -1,0 +1,8 @@
+<h3>Liste</h3>
+
+<ul>
+    <li *ngFor="let item of list; let i = index;">
+        <button (click)="remove(i)">❌</button>
+        {{ item }}
+    </li>
+</ul>

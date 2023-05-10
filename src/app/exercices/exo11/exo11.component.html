@@ -6,3 +6,9 @@
 <p>Les deux composant doivent être afficher sur la même page</p>
 
 <hr>
+
+<h3>Liste de courses</h3>
+<input type="text" [(ngModel)]="article">
+<button (click)="addItem()">Ajouter</button>
+
+<app-liste [list]="articles" (emitDelete)="removeItem($event)" />
