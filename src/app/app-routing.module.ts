@@ -12,6 +12,7 @@ import { Demo09Component } from './demos/demo09/demo09.component';
 import { Demo10Component } from './demos/demo10/demo10.component';
 import { Demo11Component } from './demos/demo11/demo11.component';
 import { Demo12Component } from './demos/demo12/demo12.component';
+import { Demo13Component } from './demos/demo13/demo13.component';
 import { DemosComponent } from './demos/demos.component';
 import { ExercicesComponent } from './exercices/exercices.component';
 import { Exo01Component } from './exercices/exo01/exo01.component';
@@ -43,6 +44,7 @@ const routes: Routes = [
       { path: 'demo10', component: Demo10Component },
       { path: 'demo11', component: Demo11Component },
       { path: 'demo12', component: Demo12Component },
+      { path: 'demo13', component: Demo13Component },
     ]
   },
 
