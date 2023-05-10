@@ -42,6 +42,7 @@ import { ChildOutputComponent } from './demos/demo11/child-output/child-output.c
 import { ChildNgcontentComponent } from './demos/demo11/child-ngcontent/child-ngcontent.component';
 import { Exo11Component } from './exercices/exo11/exo11.component';
 import { ListeComponent } from './exercices/exo11/liste/liste.component';
+import { Demo12Component } from './demos/demo12/demo12.component';
 
 @NgModule({
   declarations: [
@@ -82,6 +83,7 @@ import { ListeComponent } from './exercices/exo11/liste/liste.component';
     ChildNgcontentComponent,
     Exo11Component,
     ListeComponent,
+    Demo12Component,
   ],
   imports: [
     BrowserModule,
