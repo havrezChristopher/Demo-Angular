@@ -1,0 +1,107 @@
+<h2>Demo 14 - Les formulaires (Validators)</h2>
+
+<h3>Avec Two-Way Binding</h3>
+
+<div class="d-block">
+
+    <label>Name : {{ name }}</label>
+    <input type="text" [(ngModel)]="name">
+
+    <label>Email : {{ email }}</label>
+    <input type="email" [(ngModel)]="email">
+
+    <label>Password : {{ password }}</label>
+    <input type="password" [(ngModel)]="password">
+
+    <label>Gender : {{ gender }}</label>
+    <select [(ngModel)]="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+    </select>
+
+    <button *ngIf="name && email && password && gender" (click)="sendTWB()">Envoyer</button>
+
+</div>
+
+<h3>Avec Validators</h3>
+
+
+<div class="d-block">
+
+    <form [formGroup]="form" class="d-block">
+
+        <label>Name : {{ name }}</label>
+        <input type="text" formControlName="name" [ngClass]="{ error: nameControl.invalid && nameControl.touched }"
+            minlength="2" maxlength="15">
+        <div *ngIf="nameControl.touched && nameControl.errors">
+            <p *ngIf="nameControl.errors['required']">Le champ est requis.</p>
+            <p *ngIf="nameControl.errors['minlength']">Le nom doit faire minimum 2 caractères.</p>
+            <p *ngIf="nameControl.errors['maxlength']">Le nom doit faire maximum 15 caractères.</p>
+        </div>
+
+        <label>Email : {{ email }}</label>
+        <input type="email" formControlName="email"
+            [ngClass]="{ error: form.controls['email'].invalid && form.controls['email'].touched }">
+        <div *ngIf="form.controls['email'].touched && form.controls['email'].errors">
+            <p *ngIf="form.controls['email'].errors['required']">Le champ est requis.</p>
+            <p *ngIf="form.controls['email'].errors['email']">Vous devez entré un format d'email valide.</p>
+        </div>
+
+        <label>Password : {{ password }}</label>
+        <input type="password" formControlName="password">
+
+        <label>Gender : {{ gender }}</label>
+        <select formControlName="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+
+        <button (click)="send()" [disabled]="form.invalid">Envoyer</button>
+
+    </form>
+
+    <h3>Form Control (AbstractControl) : </h3>
+
+    <p>
+        Pristine {{ form.pristine }} : Retourne true si l'utilisateur n'a pas modifié la valeur.
+    </p>
+
+    <p>
+        Dirty {{ form.dirty }} : Retourne true si l'utilisateur a modifié la valeur.
+    </p>
+
+    <p>
+        Status {{ form.status }} : Retourne une chaine de caractères correspondant au statut du contrôle (VALID |
+        INVALID | PENDING | DISABLED)
+    </p>
+
+    <p>
+        Touched {{ form.touched }} : Retourne true si l'utilisateur a touché un champ.
+    </p>
+
+    <p>
+        Untouched {{ form.untouched }} : Returne true si l'utilsiateur n'a pas touché un champ.
+    </p>
+
+    <p>
+        Invalid {{ form.invalid }} : Retourne true si le formulaire n'est pas valide. (STATUS === INVALID)
+    </p>
+
+    <p>
+        Valid {{ form.valid }} : Retourne true si le formulaire est valide. (STATUS === VALID)
+    </p>
+
+    <h3>Principaux validateurs :</h3>
+
+    <p>min : Vérifie si le champ n'est pas inférieur au minimum entré.</p>
+    <p>max : Vérifie si le champ n'est pas supérieur au maxim entré.</p>
+    <p>required : Vérifie si le champ possède une valeur</p>
+    <p>requiredTrue : Vérifie si le champ possède la valeur true</p>
+    <p>email : Vérifie si le champ est au format email</p>
+    <p>minLength : Vérifie si le nombre de caractères du champ n'est pas inférieur au minimum indiqué</p>
+    <p>maxLength : Vérifie si le nombre de caractères du champ n'est pas supérieur au maximum indiqué</p>
+    <p>pattern : Vérifie si le champ correspond au pattern (regex) entré.</p>
+
+</div>
