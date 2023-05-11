@@ -49,6 +49,7 @@ import { ShoppingListComponent } from './exercices/exo12/shopping-list/shopping-
 import { FourofourComponent } from './shared/components/fourofour/fourofour.component';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { Demo15Component } from './demos/demo15/demo15.component';
+import { Exo15Component } from './exercices/exo15/exo15.component';
 
 @NgModule({
   declarations: [
@@ -96,6 +97,7 @@ import { Demo15Component } from './demos/demo15/demo15.component';
     ShoppingListComponent,
     Demo14Component,
     Demo15Component,
+    Exo15Component,
   ],
   imports: [
     BrowserModule,
