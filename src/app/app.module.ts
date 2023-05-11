@@ -13,38 +13,40 @@ import { Demo03Component } from './demos/demo03/demo03.component';
 import { Demo04Component } from './demos/demo04/demo04.component';
 import { Demo05Component } from './demos/demo05/demo05.component';
 import { Demo06Component } from './demos/demo06/demo06.component';
+import { Demo07Component } from './demos/demo07/demo07.component';
+import { GetValuePipe } from './demos/demo07/get-value.pipe';
+import { SecondsToDHMSPipe } from './demos/demo07/seconds-to-dhms.pipe';
+import { SumPipe } from './demos/demo07/sum.pipe';
+import { Demo08Component } from './demos/demo08/demo08.component';
+import { Demo09Component } from './demos/demo09/demo09.component';
+import { Demo10Component } from './demos/demo10/demo10.component';
+import { HighlightDirective } from './demos/demo10/highlight.directive';
+import { PrepareRenderDirective } from './demos/demo10/prepare-render.directive';
+import { ChildInputComponent } from './demos/demo11/child-input/child-input.component';
+import { ChildNgcontentComponent } from './demos/demo11/child-ngcontent/child-ngcontent.component';
+import { ChildOutputComponent } from './demos/demo11/child-output/child-output.component';
+import { Demo11Component } from './demos/demo11/demo11.component';
+import { Demo12Component } from './demos/demo12/demo12.component';
+import { ChildComponent } from './demos/demo13/child/child.component';
+import { Demo13Component } from './demos/demo13/demo13.component';
 import { DemosComponent } from './demos/demos.component';
 import { ExercicesComponent } from './exercices/exercices.component';
 import { Exo01Component } from './exercices/exo01/exo01.component';
 import { Exo02Component } from './exercices/exo02/exo02.component';
 import { Exo03Component } from './exercices/exo03/exo03.component';
 import { Exo05Component } from './exercices/exo05/exo05.component';
-import { FourofourComponent } from './shared/components/fourofour/fourofour.component';
-import { NavbarComponent } from './shared/components/navbar/navbar.component';
-import { Demo07Component } from './demos/demo07/demo07.component';
-import { SecondsToDHMSPipe } from './demos/demo07/seconds-to-dhms.pipe';
-import { GetValuePipe } from './demos/demo07/get-value.pipe';
-import { SumPipe } from './demos/demo07/sum.pipe';
-import { Exo07Component } from './exercices/exo07/exo07.component';
-import { ToFahrenheitPipe } from './exercices/exo07/to-fahrenheit.pipe';
-import { ToCelsiusPipe } from './exercices/exo07/to-celsius.pipe';
 import { ConvertisseurDegrePipe } from './exercices/exo07/convertisseur-degre.pipe';
-import { Demo08Component } from './demos/demo08/demo08.component';
+import { Exo07Component } from './exercices/exo07/exo07.component';
+import { ToCelsiusPipe } from './exercices/exo07/to-celsius.pipe';
+import { ToFahrenheitPipe } from './exercices/exo07/to-fahrenheit.pipe';
 import { Exo08Component } from './exercices/exo08/exo08.component';
-import { Demo09Component } from './demos/demo09/demo09.component';
 import { Exo09Component } from './exercices/exo09/exo09.component';
-import { Demo10Component } from './demos/demo10/demo10.component';
-import { PrepareRenderDirective } from './demos/demo10/prepare-render.directive';
-import { HighlightDirective } from './demos/demo10/highlight.directive';
-import { Demo11Component } from './demos/demo11/demo11.component';
-import { ChildInputComponent } from './demos/demo11/child-input/child-input.component';
-import { ChildOutputComponent } from './demos/demo11/child-output/child-output.component';
-import { ChildNgcontentComponent } from './demos/demo11/child-ngcontent/child-ngcontent.component';
 import { Exo11Component } from './exercices/exo11/exo11.component';
 import { ListeComponent } from './exercices/exo11/liste/liste.component';
-import { Demo12Component } from './demos/demo12/demo12.component';
-import { Demo13Component } from './demos/demo13/demo13.component';
-import { ChildComponent } from './demos/demo13/child/child.component';
+import { Exo12Component } from './exercices/exo12/exo12.component';
+import { FourofourComponent } from './shared/components/fourofour/fourofour.component';
+import { NavbarComponent } from './shared/components/navbar/navbar.component';
+import { ShoppingListComponent } from './exercices/exo12/shopping-list/shopping-list.component';
 
 @NgModule({
   declarations: [
@@ -88,6 +90,8 @@ import { ChildComponent } from './demos/demo13/child/child.component';
     Demo12Component,
     Demo13Component,
     ChildComponent,
+    Exo12Component,
+    ShoppingListComponent,
   ],
   imports: [
     BrowserModule,

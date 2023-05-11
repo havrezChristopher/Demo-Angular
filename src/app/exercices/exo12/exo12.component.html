@@ -1,0 +1,25 @@
+<h2>Exercice 12 - Shopping List avec services</h2>
+
+<p>
+    Optimiser la liste de course avec l’utilisation d’un service qui gère la liste et les
+    méthodes qui peuvent s’y appliquer.
+</p>
+<p>
+    Ajouter la possibilité de gérer le nombre d’articles voulu (Ex : Lait x 6, Tomates x 3, …)
+</p>
+
+<hr>
+
+<h3>Ajouter un article</h3>
+<div class="d-block">
+    <label>Nom du produit :</label>
+    <input type="text" [(ngModel)]="article.name">
+
+    <label>Quantité:</label>
+    <input type="number" [(ngModel)]="article.quantity">
+
+    <input type="button" value="Ajouter" (click)="add()">
+</div>
+
+<app-shopping-list [shoppingList]="liste" (deleteItem)="remove($event)" (increaseItem)="increment($event)"
+    (decreaseItem)="decrement($event)" />

@@ -1,0 +1,9 @@
+<h3>Liste</h3>
+
+<ul>
+    <li *ngFor="let article of shoppingList; let i = index">
+        <button (click)="remove(i)">❌</button>
+        {{ article.name }} x{{ article.quantity }}
+        <button (click)="decrease(i)">➖</button> &nbsp; <button (click)="increase(i)">➕</button>
+    </li>
+</ul>
