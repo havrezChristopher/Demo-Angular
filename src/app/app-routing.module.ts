@@ -15,6 +15,7 @@ import { Demo12Component } from './demos/demo12/demo12.component';
 import { Demo13Component } from './demos/demo13/demo13.component';
 import { Demo14Component } from './demos/demo14/demo14.component';
 import { Demo15Component } from './demos/demo15/demo15.component';
+import { Demo16Component } from './demos/demo16/demo16.component';
 import { DemosComponent } from './demos/demos.component';
 import { ExercicesComponent } from './exercices/exercices.component';
 import { Exo01Component } from './exercices/exo01/exo01.component';
@@ -51,6 +52,13 @@ const routes: Routes = [
       { path: 'demo13', component: Demo13Component },
       { path: 'demo14', component: Demo14Component },
       { path: 'demo15', component: Demo15Component },
+      {
+        path: 'demo16', children: [
+          { path: '', component: Demo16Component },
+          { path: 'routage', component: Demo16Component },
+          { path: 'routage/:id', component: Demo16Component },
+        ]
+      },
     ]
   },
 

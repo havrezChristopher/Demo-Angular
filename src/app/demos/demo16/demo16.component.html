@@ -1,0 +1,18 @@
+<h2>Demo 16 - Le routing</h2>
+
+<p>
+    La classe Router permet de gérer les routes au sein d'un composant
+</p>
+
+<h3>Redirection vers ce composant</h3>
+<button (click)="navigate()">/demos/demo16/routage</button>
+
+<h3>Redirection vers ce composant avec un paramètre</h3>
+<button (click)="navigateWithParam()">/demos/demo16/routage/42</button>
+<p *ngIf="id">L'id transmit par l'url vaut {{ id }}</p>
+
+<h3>Redirection vers ce composant avec un queryParam</h3>
+<button (click)="navigateWithQuery()">/demos/demo16/routage</button>
+<p *ngIf="name">queryParam transmis : {{ name }}</p>
+
+<p>Attention, le queryParam reste si vous ne changer pas la route</p>
