@@ -1,0 +1,35 @@
+<h2>Demo 15 - Les Custom Validators</h2>
+
+<form [formGroup]="form" class="d-block">
+
+    <label>Name :</label>
+    <input type="text" formControlName="name">
+    <ng-container *ngIf="form.controls['name'].touched">
+        <p *ngIf="form.controls['name'].errors">
+            {{ form.controls['name'].errors['name'] }}
+        </p>
+    </ng-container>
+
+    <label>Email :</label>
+    <input type="email" formControlName="email">
+    <ng-container *ngIf="form.controls['email'].touched">
+        <p *ngIf="form.controls['email'].errors">
+            {{ form.controls['email'].errors['name'] }}
+        </p>
+    </ng-container>
+
+    <label>Password :</label>
+    <input type="password" formControlName="password">
+
+    <label>Confirm Password :</label>
+    <input type="password" formControlName="verifyPassword">
+    <ng-container *ngIf="form.controls['verifyPassword'].touched">
+        <p *ngIf="form.errors">
+            {{ form.errors['twoPasswordCheck'] }}
+        </p>
+    </ng-container>
+
+
+    <button [disabled]="form.invalid">Envoyer</button>
+
+</form>
