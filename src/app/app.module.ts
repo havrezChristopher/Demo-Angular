@@ -51,6 +51,8 @@ import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { Demo15Component } from './demos/demo15/demo15.component';
 import { Exo15Component } from './exercices/exo15/exo15.component';
 import { Demo16Component } from './demos/demo16/demo16.component';
+import { Demo17Component } from './demos/demo17/demo17.component';
+import { Demo17guardedComponent } from './demos/demo17/demo17guarded/demo17guarded.component';
 
 @NgModule({
   declarations: [
@@ -100,6 +102,8 @@ import { Demo16Component } from './demos/demo16/demo16.component';
     Demo15Component,
     Exo15Component,
     Demo16Component,
+    Demo17Component,
+    Demo17guardedComponent,
   ],
   imports: [
     BrowserModule,

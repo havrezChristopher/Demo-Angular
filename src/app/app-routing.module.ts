@@ -16,6 +16,11 @@ import { Demo13Component } from './demos/demo13/demo13.component';
 import { Demo14Component } from './demos/demo14/demo14.component';
 import { Demo15Component } from './demos/demo15/demo15.component';
 import { Demo16Component } from './demos/demo16/demo16.component';
+import { Demo17Component } from './demos/demo17/demo17.component';
+import { Demo17guardedComponent } from './demos/demo17/demo17guarded/demo17guarded.component';
+import { canActivateChildGuard } from './demos/demo17/guards/can-activate-child.guard';
+import { canDesactivateGuard } from './demos/demo17/guards/can-desactivate.guard';
+import { isauthGuard } from './demos/demo17/guards/isauth.guard';
 import { DemosComponent } from './demos/demos.component';
 import { ExercicesComponent } from './exercices/exercices.component';
 import { Exo01Component } from './exercices/exo01/exo01.component';
@@ -59,6 +64,17 @@ const routes: Routes = [
           { path: 'routage/:id', component: Demo16Component },
         ]
       },
+      {
+        path: 'demo17', canActivateChild: [canActivateChildGuard], children: [
+          { path: '', component: Demo17Component },
+          {
+            path: 'demo17guarded',
+            component: Demo17guardedComponent,
+            canActivate: [isauthGuard],
+            canDeactivate: [canDesactivateGuard]
+          }
+        ]
+      }
     ]
   },
 
