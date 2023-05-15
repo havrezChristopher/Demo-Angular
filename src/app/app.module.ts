@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 
 import { HomeComponent } from './home/home.component';
 
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Demo01Component } from './demos/demo01/demo01.component';
 import { Demo02Component } from './demos/demo02/demo02.component';
@@ -30,6 +31,14 @@ import { Demo12Component } from './demos/demo12/demo12.component';
 import { ChildComponent } from './demos/demo13/child/child.component';
 import { Demo13Component } from './demos/demo13/demo13.component';
 import { Demo14Component } from './demos/demo14/demo14.component';
+import { Demo15Component } from './demos/demo15/demo15.component';
+import { Demo16Component } from './demos/demo16/demo16.component';
+import { Demo17Component } from './demos/demo17/demo17.component';
+import { Demo17guardedComponent } from './demos/demo17/demo17guarded/demo17guarded.component';
+import { Demo18Component } from './demos/demo18/demo18.component';
+import { Demo19Component } from './demos/demo19/demo19.component';
+import { Demo20Component } from './demos/demo20/demo20.component';
+import { Demo21Component } from './demos/demo21/demo21.component';
 import { DemosComponent } from './demos/demos.component';
 import { ExercicesComponent } from './exercices/exercices.component';
 import { Exo01Component } from './exercices/exo01/exo01.component';
@@ -46,15 +55,11 @@ import { Exo11Component } from './exercices/exo11/exo11.component';
 import { ListeComponent } from './exercices/exo11/liste/liste.component';
 import { Exo12Component } from './exercices/exo12/exo12.component';
 import { ShoppingListComponent } from './exercices/exo12/shopping-list/shopping-list.component';
+import { Exo15Component } from './exercices/exo15/exo15.component';
 import { FourofourComponent } from './shared/components/fourofour/fourofour.component';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
-import { Demo15Component } from './demos/demo15/demo15.component';
-import { Exo15Component } from './exercices/exo15/exo15.component';
-import { Demo16Component } from './demos/demo16/demo16.component';
-import { Demo17Component } from './demos/demo17/demo17.component';
-import { Demo17guardedComponent } from './demos/demo17/demo17guarded/demo17guarded.component';
-import { Demo18Component } from './demos/demo18/demo18.component';
-import { Demo19Component } from './demos/demo19/demo19.component';
+import { AddComponent } from './demos/demo21/add/add.component';
+import { EditComponent } from './demos/demo21/edit/edit.component';
 
 @NgModule({
   declarations: [
@@ -108,12 +113,17 @@ import { Demo19Component } from './demos/demo19/demo19.component';
     Demo17guardedComponent,
     Demo18Component,
     Demo19Component,
+    Demo20Component,
+    Demo21Component,
+    AddComponent,
+    EditComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule, // Important pour le fonctionnement du Two-Way Binding
     ReactiveFormsModule, // Important pour le fonctionnement du FormGroup
+    HttpClientModule, // Important pour le fonctionne du HttpClient
   ],
   providers: [
     // Permet d'injecter la langue FR partout dans l'application

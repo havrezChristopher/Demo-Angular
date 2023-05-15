@@ -1,0 +1,14 @@
+{
+  "products": [
+    {
+      "id": 3,
+      "name": "PC Gamer",
+      "price": 2249.99
+    },
+    {
+      "name": "Plante",
+      "price": "7.99",
+      "id": 4
+    }
+  ]
+}
