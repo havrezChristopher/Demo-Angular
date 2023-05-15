@@ -28,6 +28,7 @@ import { Demo20Component } from './demos/demo20/demo20.component';
 import { AddComponent } from './demos/demo21/add/add.component';
 import { Demo21Component } from './demos/demo21/demo21.component';
 import { EditComponent } from './demos/demo21/edit/edit.component';
+import { Demo22Component } from './demos/demo22/demo22.component';
 import { DemosComponent } from './demos/demos.component';
 import { ExercicesComponent } from './exercices/exercices.component';
 import { Exo01Component } from './exercices/exo01/exo01.component';
@@ -94,6 +95,7 @@ const routes: Routes = [
           { path: 'update/:id', component: EditComponent },
         ]
       },
+      { path: 'demo22', component: Demo22Component }
     ]
   },
 

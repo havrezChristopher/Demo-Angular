@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 
 import { HomeComponent } from './home/home.component';
 
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Demo01Component } from './demos/demo01/demo01.component';
 import { Demo02Component } from './demos/demo02/demo02.component';
@@ -38,7 +38,11 @@ import { Demo17guardedComponent } from './demos/demo17/demo17guarded/demo17guard
 import { Demo18Component } from './demos/demo18/demo18.component';
 import { Demo19Component } from './demos/demo19/demo19.component';
 import { Demo20Component } from './demos/demo20/demo20.component';
+import { AddComponent } from './demos/demo21/add/add.component';
 import { Demo21Component } from './demos/demo21/demo21.component';
+import { EditComponent } from './demos/demo21/edit/edit.component';
+import { Demo22Component } from './demos/demo22/demo22.component';
+import { TokenInterceptor } from './demos/demo22/interceptors/token.interceptor';
 import { DemosComponent } from './demos/demos.component';
 import { ExercicesComponent } from './exercices/exercices.component';
 import { Exo01Component } from './exercices/exo01/exo01.component';
@@ -58,8 +62,6 @@ import { ShoppingListComponent } from './exercices/exo12/shopping-list/shopping-
 import { Exo15Component } from './exercices/exo15/exo15.component';
 import { FourofourComponent } from './shared/components/fourofour/fourofour.component';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
-import { AddComponent } from './demos/demo21/add/add.component';
-import { EditComponent } from './demos/demo21/edit/edit.component';
 
 @NgModule({
   declarations: [
@@ -117,6 +119,7 @@ import { EditComponent } from './demos/demo21/edit/edit.component';
     Demo21Component,
     AddComponent,
     EditComponent,
+    Demo22Component,
   ],
   imports: [
     BrowserModule,
@@ -127,7 +130,12 @@ import { EditComponent } from './demos/demo21/edit/edit.component';
   ],
   providers: [
     // Permet d'injecter la langue FR partout dans l'application
-    { provide: LOCALE_ID, useValue: 'fr-FR' }
+    { provide: LOCALE_ID, useValue: 'fr-FR' },
+    // provide: indique que vous souhaitez enregistrer un intercepteur pour les requête HTTP
+    // useCLass: la classe de votre intercepteur personnalité qu'on souhaite utiliser
+    // multi: enregistrer plusieurs intercepteurs de type HTTP_INTERCEPTORS
+    // • true : vous pouvez enregistrer plusieurs intercepteurs dans le même provider
+    { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })
