@@ -1,0 +1,39 @@
+<h2>Exercice 21 - Pokedex avec HttpClient</h2>
+
+<p>Consommer l'api se trouvant à l'adresse: https://pokeapi.co/api/v2/pokemon</p>
+<p>Afficher la liste des pokémon 20 par 20</p>
+<p>Prévoir un bouton next et previous pour la navigation entre les listes</p>
+
+<p>Lors d'un clic sur un pokémon : afficher les détails suivant :</p>
+
+<ul>
+    <li>Name</li>
+    <li>Weight</li>
+    <li>Height</li>
+    <li>Sprites => front_default | back_default | official-artwork</li>
+</ul>
+
+<hr>
+
+<h3>Liste des pokémons</h3>
+
+<div class="d-flex">
+
+    <div *ngIf="currentTwenty">
+        <ul>
+            <li *ngFor="let pokemon of currentTwenty.results">
+                <button (click)="showDetails(pokemon.url)">Détails</button>
+                {{ pokemon.name }}
+            </li>
+        </ul>
+
+        <button *ngIf="currentTwenty.previous" (click)="loadData(currentTwenty.previous)">Previous</button>
+        <button *ngIf="currentTwenty.next" (click)="loadData(currentTwenty.next)">Next</button>
+    </div>
+
+    <div *ngIf="selectedPokemon">
+        <button (click)="closeDetails()">Fermer les détails</button>
+        <app-details [pokemonUrl]="selectedPokemon" />
+    </div>
+
+</div>

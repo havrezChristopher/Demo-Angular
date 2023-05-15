@@ -62,6 +62,8 @@ import { ShoppingListComponent } from './exercices/exo12/shopping-list/shopping-
 import { Exo15Component } from './exercices/exo15/exo15.component';
 import { FourofourComponent } from './shared/components/fourofour/fourofour.component';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
+import { Exo21Component } from './exercices/exo21/exo21.component';
+import { DetailsComponent } from './exercices/exo21/details/details.component';
 
 @NgModule({
   declarations: [
@@ -120,6 +122,8 @@ import { NavbarComponent } from './shared/components/navbar/navbar.component';
     AddComponent,
     EditComponent,
     Demo22Component,
+    Exo21Component,
+    DetailsComponent,
   ],
   imports: [
     BrowserModule,

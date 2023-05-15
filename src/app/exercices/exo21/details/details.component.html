@@ -1,0 +1,16 @@
+<div *ngIf="selectedPokemon">
+
+    <h3>Détails de {{ selectedPokemon.name | titlecase }}</h3>
+
+    <img [src]="selectedPokemon.sprites.front_default">
+    <img [src]="selectedPokemon.sprites.back_default">
+
+    <p>Poids : {{ selectedPokemon.weight }} kg</p>
+    <p>Taille : {{ selectedPokemon.height / 10 }} m</p>
+
+    <h4>Artworks :</h4>
+
+    <img class="artwork" [src]="selectedPokemon.sprites.other['official-artwork'].front_default">
+    <img class="artwork" [src]="selectedPokemon.sprites.other['official-artwork'].front_shiny">
+
+</div>
