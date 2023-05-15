@@ -54,6 +54,7 @@ import { Demo16Component } from './demos/demo16/demo16.component';
 import { Demo17Component } from './demos/demo17/demo17.component';
 import { Demo17guardedComponent } from './demos/demo17/demo17guarded/demo17guarded.component';
 import { Demo18Component } from './demos/demo18/demo18.component';
+import { Demo19Component } from './demos/demo19/demo19.component';
 
 @NgModule({
   declarations: [
@@ -106,6 +107,7 @@ import { Demo18Component } from './demos/demo18/demo18.component';
     Demo17Component,
     Demo17guardedComponent,
     Demo18Component,
+    Demo19Component,
   ],
   imports: [
     BrowserModule,

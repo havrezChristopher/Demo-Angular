@@ -23,6 +23,7 @@ import { canDesactivateGuard } from './demos/demo17/guards/can-desactivate.guard
 import { isauthGuard } from './demos/demo17/guards/isauth.guard';
 import { Demo18Component } from './demos/demo18/demo18.component';
 import { userResolver } from './demos/demo18/resolvers/user.resolver';
+import { Demo19Component } from './demos/demo19/demo19.component';
 import { DemosComponent } from './demos/demos.component';
 import { ExercicesComponent } from './exercices/exercices.component';
 import { Exo01Component } from './exercices/exo01/exo01.component';
@@ -79,7 +80,8 @@ const routes: Routes = [
       },
 
       { path: 'demo18', component: Demo18Component },
-      { path: 'demo18/:id', component: Demo18Component, resolve: { user: userResolver } }
+      { path: 'demo18/:id', component: Demo18Component, resolve: { user: userResolver } },
+      { path: 'demo19', component: Demo19Component },
     ]
   },
 
