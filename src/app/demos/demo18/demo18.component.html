@@ -1,0 +1,20 @@
+<h2>Demo 18 - Resolver</h2>
+
+<p>
+    Les resolvers sont des fonctions qui permettent de pré-charger des données avant que la vue associée soit rendue.
+    Ils sont souvent utilisés pour résoudre des données asynchrones telles que les données provenant d'une API.
+    Cela permet d'éviter des problèmes de rendu avec la vue.
+</p>
+
+<a routerLink="/demos/demo18"><button>Retour à la liste des utilisateurs</button></a>
+
+<a routerLink="/demos/demo18/1"><button>Utiliseur ID 1</button></a>
+<a routerLink="/demos/demo18/2"><button>Utiliseur ID 2</button></a>
+<a routerLink="/demos/demo18/3"><button>Utiliseur ID 3</button></a>
+<a routerLink="/demos/demo18/4"><button>Utiliseur ID 4</button></a>
+
+<div *ngIf="user">
+    <h2>Détails de l'utilisateur</h2>
+    <p>Nom : {{ user.nom }}</p>
+    <p>Nom : {{ user.prenom }}</p>
+</div>

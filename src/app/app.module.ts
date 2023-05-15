@@ -53,6 +53,7 @@ import { Exo15Component } from './exercices/exo15/exo15.component';
 import { Demo16Component } from './demos/demo16/demo16.component';
 import { Demo17Component } from './demos/demo17/demo17.component';
 import { Demo17guardedComponent } from './demos/demo17/demo17guarded/demo17guarded.component';
+import { Demo18Component } from './demos/demo18/demo18.component';
 
 @NgModule({
   declarations: [
@@ -104,6 +105,7 @@ import { Demo17guardedComponent } from './demos/demo17/demo17guarded/demo17guard
     Demo16Component,
     Demo17Component,
     Demo17guardedComponent,
+    Demo18Component,
   ],
   imports: [
     BrowserModule,
